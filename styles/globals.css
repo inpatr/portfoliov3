@@ -6,6 +6,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;500;600&display=swap");
 
+/* ---------- GENERAL ---------- */
 body {
   padding-top: 10rem;
   padding-left: 14rem;
@@ -55,6 +56,22 @@ h3 {
   letter-spacing: 10%;
 }
 
+/* ---------- HEADER ---------- */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: none;
+  width: screen;
+  height: 6rem;
+}
+
+li {
+  text-decoration: none;
+}
+
+/* ---------- MAIN ---------- */
+
 .portfolio {
   position: absolute;
   right: 3rem;
@@ -66,6 +83,8 @@ h3 {
   width: 110%;
   padding-left: 3rem;
 }
+
+/* ---------- ABOUT ---------- */
 
 .mypic {
   position: absolute;
@@ -110,12 +129,12 @@ h3 {
   border-radius: 8px;
   font-family: monospace;
   cursor: pointer;
-  box-shadow: 5px 5px 2px black;
+  box-shadow: 5px 5px 2px #aaa8ff;
 }
 
 .about > .flex-container > button:hover {
-  background-color: #fbffcc;
-  box-shadow: 5px 5px 2px red;
+  background-color: #aaa8ff;
+  box-shadow: 5px 5px 2px black;
 }
 
 .flex-container {
@@ -124,4 +143,8 @@ h3 {
   width: inherit;
   align-items: center;
   justify-content: center;
+}
+
+.aboutheader {
+  padding-left: 18rem;
 }
