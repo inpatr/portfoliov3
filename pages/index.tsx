@@ -16,7 +16,7 @@ const Home: NextPage = () => {
             <h1>
               Inga Patricia Traub
               <br />
-              ---------
+              ----------
             </h1>
             <div className="portfolio">
               <h3>portfolio</h3>
@@ -26,18 +26,24 @@ const Home: NextPage = () => {
         <section>
           <div className="about">
             <div className="mypic"></div>
-            <h2>About</h2>
+            <div className="mypicborder"></div>
+            <div className="aboutheader">
+              <h2>---About</h2>
+            </div>
             <p>
               Hey, I am Inga, 29 years old and a recent graduate of the 5th Code
-              & Design Camp of DevHaus Leipzig. Before that I was half student
-              half musician and producer. Corona has changed the lives of many
-              people and mine as well. In summer 2019 I decided to give up my
-              studies of musicology to focus on making music. During the
-              pandemic my plan failed and I felt the urge to learn something
-              completely new. And it seems like I did.. what you’re looking at
-              is my first website.
+              & Design Camp of DevHaus Leipzig. Before I was half student half
+              musician and producer. Corona has changed the lives of many people
+              and mine as well. In summer 2019 I decided to give up my studies
+              of musicology to focus on making music. During the pandemic my
+              plan failed and I felt the urge to learn something completely new.
+              And it seems like I did.. what you’re looking at is my first
+              website.
             </p>
             <p>I'm currently looking for jobs. Feel free to contact me!</p>
+            <div className="flex-container">
+              <button>Contact me</button>
+            </div>
           </div>
         </section>
       </main>
