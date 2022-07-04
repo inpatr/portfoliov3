@@ -1,9 +1,27 @@
-html,
+@font-face {
+  font-family: "FT88-Expanded";
+  src: url("../public/FT88-Expanded.otf") format("opentype");
+  font-style: medium;
+}
+
 body {
-  padding: 0;
+  padding-top: 10rem;
+  padding-left: 14rem;
+  padding-right: 14rem;
   margin: 0;
+  background-image: linear-gradient(#aaa8ff, #a8cbff, #fbffcc);
+  background-repeat: no-repeat;
+  height: screen;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15rem;
 }
 
 a {
@@ -13,4 +31,56 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1 {
+  font-family: FT88-Expanded;
+  font-size: 64px;
+  color: #fbffcc;
+}
+
+h2 {
+  font-family: FT88-Expanded;
+  font-size: 40px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+h3 {
+  font-family: FT88-Expanded;
+  font-size: 32px;
+  color: #fbffcc;
+}
+
+.portfolio {
+  position: absolute;
+  right: 3rem;
+  bottom: -1rem;
+}
+
+.headline {
+  position: relative;
+}
+
+.mypic {
+  position: absolute;
+  border-radius: 50%;
+  background-color: grey;
+  height: 20rem;
+  width: 20rem;
+  top: -6rem;
+  left: -4rem;
+}
+
+.about {
+  padding: 1rem;
+  position: relative;
+  border-radius: 20px;
+  background-color: #fbffcc;
+  height: 25rem;
+  box-shadow: 10px 10px 5px black;
+}
+
+.about > p {
+  padding-left: 15rem;
 }
