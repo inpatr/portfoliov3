@@ -9,7 +9,6 @@
 /* ---------- GENERAL ---------- */
 html {
   scroll-behaviour: smooth;
-  background-image: src("../public/noise.png");
 }
 
 body::-webkit-scrollbar {
@@ -21,8 +20,9 @@ body {
   padding-left: 14rem;
   padding-right: 14rem;
   margin: 0;
-  background-image: linear-gradient(#aaa8ff, #a8cbff, #fbffcc);
-  background-repeat: no-repeat;
+  background-image: url("../public/noise.png"),
+    linear-gradient(#aaa8ff, #a8cbff, #fbffcc);
+  /* background-repeat: no-repeat, repeat; */
   height: screen;
   font-family: IBM Plex Mono, monospace;
   -ms-overflow-style: none; /* IE and Edge */
