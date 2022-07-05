@@ -47,9 +47,9 @@ const Home: NextPage = () => {
         </section>
         <div
           className="scrollhint"
-          data-aos="fade-out"
-          data-aos-anchor-placement="center-top"
-          data-aos-easing="ease-out"
+          // data-aos="fade-out"
+          // data-aos-anchor-placement="top-top"
+          // data-aos-easing="ease-out"
         >
           <p>scroll</p>
           <div className="arrowcontainer">{arrowdown}</div>

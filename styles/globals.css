@@ -9,6 +9,7 @@
 /* ---------- GENERAL ---------- */
 html {
   scroll-behaviour: smooth;
+  background-image: src("../public/noise.png");
 }
 
 body::-webkit-scrollbar {
@@ -81,6 +82,13 @@ li {
 }
 
 /* ---------- MAIN ---------- */
+[data-aos="fade-out"] {
+  opacity: 1;
+  transition-property: opacity;
+}
+[data-aos="fade-out"].aos-animate {
+  opacity: 0;
+}
 
 .portfolio {
   position: absolute;
