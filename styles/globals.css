@@ -107,6 +107,8 @@ li {
 }
 
 .scrollhint {
+  /* font-family: FT88-Expanded;
+  font-size: 10px; */
   position: absolute;
   right: 5rem;
   bottom: 2rem;
@@ -169,14 +171,21 @@ li {
   cursor: pointer;
   box-shadow: 5px 5px 2px black;
   background-color: #a8cbff;
-  transition: transform 100ms ease-in-out;
 }
 
 .about > .flex-container > button:hover {
-  box-shadow: 6px 6px 2px black;
-  /* background-color: #aaa8ff; */
-  background-color: #a8cbff;
-  transform: translateY(1px);
+  animation: come-3D 100ms ease-in-out both alternate;
+}
+
+@keyframes come-3D {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    box-shadow: 6px 6px 2px black;
+    background-color: #a8cbff;
+    transform: translateY(-1px);
+  }
 }
 
 .flex-container {
