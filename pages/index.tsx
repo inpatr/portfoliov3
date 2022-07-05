@@ -1,8 +1,14 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../components/Header";
+import AOS from "aos";
+import { useEffect } from "react";
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div>
       <Head>
@@ -25,8 +31,19 @@ const Home: NextPage = () => {
           </div>
         </section>
         <section>
-          <div className="about">
-            <div className="mypic"></div>
+          <div
+            className="about"
+            // data-aos="fade-left"
+            // data-aos-offset="300"
+            // data-aos-easing="ease-in-sine"
+          >
+            <div
+              className="mypic"
+              data-aos="fade"
+              // data-aos-offset="500"
+              data-aos-anchor-placement="center-bottom"
+              data-aos-easing="ease-in-quad"
+            ></div>
             <div className="mypicborder"></div>
             <div className="aboutheader">
               <h2>About</h2>
