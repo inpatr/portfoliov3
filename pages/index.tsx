@@ -4,6 +4,21 @@ import Header from "../components/Header";
 import AOS from "aos";
 import { useEffect } from "react";
 
+const arrowdown = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="arrow"
+    viewBox="0 -1 20 20"
+    fill="currentColor"
+  >
+    <path
+      fillRule="evenodd"
+      d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z"
+      clipRule="evenodd"
+    />
+  </svg>
+);
+
 const Home: NextPage = () => {
   useEffect(() => {
     AOS.init();
@@ -30,6 +45,15 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
+        <div
+          className="scrollhint"
+          data-aos="fade-left"
+          data-aos-anchor-placement="center-bottom"
+          data-aos-easing="ease-out"
+        >
+          <p>scroll</p>
+          <div className="arrowcontainer">{arrowdown}</div>
+        </div>
         <section>
           <div
             className="about"
