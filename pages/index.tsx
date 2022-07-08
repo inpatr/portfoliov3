@@ -77,8 +77,10 @@ const Home: NextPage = () => {
                 <li>- born in '93</li>
                 <li>- based in Leipzig</li>
                 <li>- frontend web developer</li>
-                <li>- graduate of the 5th Code & Design Camp by DevHaus</li>
-                <li>- musician & producer</li>
+                <li>
+                  - graduate of the 5th Code & Design Camp of DevHaus Leipzig
+                </li>
+                <li>- singer & producer of electronic music</li>
                 <li>- love for non-violent video games</li>
               </ul>
             </p>
