@@ -260,6 +260,7 @@ li {
   top: -4rem;
   left: -8rem;
   z-index: 10;
+  box-shadow: 5px 5px 3px grey;
 }
 
 .card-left {
@@ -270,6 +271,7 @@ li {
   height: 410px;
   border-radius: 30px;
   padding: 1rem 1rem 1rem 5rem;
+  box-shadow: 10px 10px 5px black;
 }
 
 .imagecontainer-right {
@@ -280,6 +282,7 @@ li {
   top: -4rem;
   right: -8rem;
   z-index: 10;
+  box-shadow: 5px 5px 3px grey;
 }
 
 .card-right {
@@ -291,4 +294,5 @@ li {
   border-radius: 30px;
   padding: 1rem 5rem 1rem 1rem;
   text-align: right;
+  box-shadow: 10px 10px 5px black;
 }
