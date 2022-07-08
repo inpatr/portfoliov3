@@ -88,7 +88,7 @@ const Home: NextPage = () => {
                 <li>- love for non-violent video games</li>
               </ul>
             </p>
-            <p>I'm currently looking for jobs. Feel free to contact me!</p>
+            <p>I&apos;m currently looking for jobs. Feel free to contact me!</p>
             <div className="flex-container">
               <a href="mailto:i.traub@posteo.de">
                 <button>Contact me</button>
