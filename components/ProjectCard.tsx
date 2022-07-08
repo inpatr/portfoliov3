@@ -26,7 +26,7 @@ const ProjectCard = ({ side, header, content, src }: Props) => {
     setFade(`fade-up-${side}`);
     // setHeading(header);
     // setInhalt(content);
-  }, []);
+  }, [side]);
 
   if (side === "left") {
     oppositeFade = "fade-right";
@@ -46,7 +46,7 @@ const ProjectCard = ({ side, header, content, src }: Props) => {
           // data-aos-offset="800"
           data-aos-easing="ease-in"
         >
-          <Image src={src} layout="fill" />
+          <Image src={src} layout="fill" alt={header} />
         </div>
         <div
           className={card}
