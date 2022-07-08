@@ -78,7 +78,7 @@ h3 {
 }
 
 li {
-  text-decoration: none;
+  list-style-type: none;
 }
 
 /* ---------- MAIN ---------- */
@@ -166,9 +166,9 @@ li {
   line-height: 130%;
 }
 
-.facts > li {
+/* .facts > li {
   list-style-type: none;
-}
+} */
 
 /* .about > p:nth-of-type(2) {
   text-align: center;
@@ -211,4 +211,79 @@ li {
 
 .aboutheader {
   padding-left: 18rem;
+}
+
+/* ------- PROJECTS -------- */
+
+.sectionsheader {
+  text-align: center;
+  padding-bottom: 5rem;
+  margin-bottom: 5rem;
+}
+
+.projects {
+  display: flex;
+  width: screen;
+  flex-direction: row;
+}
+
+.projectcontainer {
+  position: relative;
+  width: 50%;
+}
+
+.alter-h {
+  font-family: FT88-Expanded;
+  font-size: 20px;
+}
+
+.alter-h > p:last-child {
+  line-height: 5%;
+}
+
+.cardcontainer {
+  /* position: relative; */
+  display: flex;
+  padding: 0 2.5rem 0 2.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagecontainer-left {
+  position: absolute;
+  background-color: grey;
+  width: 250px;
+  height: 550px;
+  top: -4rem;
+  left: -8rem;
+}
+
+.card-left {
+  display: flex;
+  background-color: #a9b4ff;
+  flex-direction: column;
+  width: 330px;
+  height: 410px;
+  border-radius: 0 30px 30px 0;
+  padding: 1rem 1rem 1rem 5rem;
+}
+
+.imagecontainer-right {
+  position: absolute;
+  background-color: grey;
+  width: 250px;
+  height: 550px;
+  top: -4rem;
+  right: -8rem;
+}
+
+.card-right {
+  display: flex;
+  background-color: #a9b4ff;
+  flex-direction: column;
+  width: 330px;
+  height: 410px;
+  border-radius: 30px 0px 0px 30px;
+  padding: 1rem 5rem 1rem 1rem;
+  text-align: right;
 }
