@@ -20,7 +20,7 @@ const ProjectCard = ({ side, header, content }: Props) => {
     AOS.init();
     setImg(`imagecontainer-${side}`);
     setCard(`card-${side}`);
-    setFade(`fade-${side}`);
+    setFade(`fade-up-${side}`);
     // setHeading(header);
     // setInhalt(content);
   }, []);
@@ -40,13 +40,13 @@ const ProjectCard = ({ side, header, content }: Props) => {
           className={img}
           data-aos={oppositeFade}
           data-aos-anchor-placement="bottom-bottom"
-          // data-aos-offset="600"
+          // data-aos-offset="800"
           data-aos-easing="ease-in"
         ></div>
         <div
           className={card}
           data-aos={fade}
-          data-aos-offset="300"
+          data-aos-offset="100"
           data-aos-easing="ease-in"
         >
           <div className="alter-h">
