@@ -69,6 +69,7 @@ const Home: NextPage = () => {
                 src="/../public/mepic1.jpeg"
                 layout="fill"
                 className="mypic"
+                alt="my profile pic"
               />
             </div>
             <div className="mypicborder"></div>
