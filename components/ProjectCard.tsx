@@ -26,7 +26,7 @@ const ProjectCard = ({ side, header, content, src }: Props) => {
     setFade(`fade-up-${side}`);
     // setHeading(header);
     // setInhalt(content);
-  }, []);
+  }, [side]);
 
   if (side === "left") {
     oppositeFade = "fade-right";

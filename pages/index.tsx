@@ -78,7 +78,7 @@ const Home: NextPage = () => {
             </div>
             <p>
               <ul className="facts">
-                <li>- born in '93</li>
+                <li>- born in &apos;93</li>
                 <li>- based in Leipzig</li>
                 <li>- frontend web developer</li>
                 <li>
