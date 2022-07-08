@@ -160,16 +160,21 @@ li {
   position: relative;
   border-radius: 20px;
   background-color: #fdffe0;
-  height: 25rem;
+  /* height: 20rem; */
+  width: 100%;
   box-shadow: 10px 10px 5px black;
   line-height: 130%;
 }
 
-.about > p:nth-of-type(2) {
-  text-align: center;
+.facts > li {
+  list-style-type: none;
 }
 
-.about > .flex-container > button {
+/* .about > p:nth-of-type(2) {
+  text-align: center;
+} */
+
+.about > .flex-container > a > button {
   display: flex;
   border: none;
   align-self: center;
@@ -181,7 +186,7 @@ li {
   background-color: #a8cbff;
 }
 
-.about > .flex-container > button:hover {
+.about > .flex-container > a > button:hover {
   animation: come-3D 100ms ease-in-out both alternate;
 }
 

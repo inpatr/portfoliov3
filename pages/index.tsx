@@ -73,18 +73,21 @@ const Home: NextPage = () => {
               <h2>About</h2>
             </div>
             <p>
-              Hey, I am Inga, 29 years old and a recent graduate of the 5th Code
-              & Design Camp of DevHaus Leipzig. Before I was half student half
-              musician and producer. Corona has changed the lives of many people
-              and mine as well. In summer 2019 I decided to give up my studies
-              of musicology to focus on making music. During the pandemic my
-              plan failed and I felt the urge to learn something completely new.
-              And it seems like I did.. what you’re looking at is my first
-              website.
+              <ul className="facts">
+                <li>- born in '93</li>
+                <li>- based in Leipzig</li>
+                <li>- frontend web developer</li>
+                <li>- graduate of the 5th Code & Design Camp by DevHaus</li>
+                <li>- musician & producer</li>
+                <li>- love for non-violent video games</li>
+              </ul>
             </p>
             <p>I'm currently looking for jobs. Feel free to contact me!</p>
+
             <div className="flex-container">
-              <button>Contact me</button>
+              <a href="mailto:i.traub@posteo.de">
+                <button>Contact me</button>
+              </a>
             </div>
           </div>
         </section>
