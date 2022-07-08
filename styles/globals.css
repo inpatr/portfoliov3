@@ -16,6 +16,9 @@ body::-webkit-scrollbar {
 }
 
 body {
+  font-size-adjust: none;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
   padding-top: 10rem;
   padding-left: 14rem;
   padding-right: 14rem;
