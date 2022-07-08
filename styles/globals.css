@@ -1,9 +1,40 @@
-html,
+@font-face {
+  font-family: "FT88-Expanded";
+  src: url("../public/FT88-Expanded.otf") format("opentype");
+  font-style: medium;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;500;600&display=swap");
+
+/* ---------- GENERAL ---------- */
+html {
+  scroll-behaviour: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body {
-  padding: 0;
+  padding-top: 10rem;
+  padding-left: 14rem;
+  padding-right: 14rem;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-image: url("../public/noise.png"),
+    linear-gradient(#aaa8ff, #a8cbff, #fbffcc);
+  /* background-repeat: no-repeat, repeat; */
+  height: screen;
+  font-family: IBM Plex Mono, monospace;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15rem;
 }
 
 a {
@@ -13,4 +44,246 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1 {
+  font-family: FT88-Expanded;
+  font-size: 64px;
+  color: #fdffe0;
+  letter-spacing: 10%;
+}
+
+h2 {
+  font-family: FT88-Expanded;
+  font-size: 40px;
+  text-decoration: underline;
+  letter-spacing: 15px;
+}
+
+h3 {
+  font-family: FT88-Expanded;
+  font-size: 32px;
+  color: #fdffe0;
+  letter-spacing: 10%;
+}
+
+/* ---------- HEADER ---------- */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: none;
+  width: screen;
+  height: 6rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* ---------- MAIN ---------- */
+[data-aos="fade-out"] {
+  opacity: 1;
+  transition-property: opacity;
+}
+[data-aos="fade-out"].aos-animate {
+  opacity: 0;
+}
+
+.portfolio {
+  position: absolute;
+  right: 3rem;
+  bottom: -1rem;
+}
+
+.headline {
+  position: relative;
+  width: 110%;
+  padding-left: 3rem;
+}
+
+.arrowcontainer {
+  display: flex;
+  justify-content: center;
+  width: 3.25rem;
+}
+
+.arrow {
+  /* padding-top: 5px; */
+  height: 1rem;
+  width: 1rem;
+}
+
+.scrollhint {
+  /* font-family: FT88-Expanded;
+  font-size: 10px; */
+  position: absolute;
+  right: 5rem;
+  bottom: 2rem;
+  color: #fdffe0;
+  animation: animated-text 1s ease-in forwards infinite alternate;
+}
+
+@keyframes animated-text {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+/* ---------- ABOUT ---------- */
+
+.mypic {
+  position: absolute;
+  border-radius: 50%;
+  background-color: grey;
+  height: 22rem;
+  width: 22rem;
+  top: -5rem;
+  left: -6rem;
+}
+
+.mypicborder {
+  float: left;
+  margin-right: 12px;
+  border-radius: 50%;
+  height: 16rem;
+  width: 16rem;
+  object-fit: cover;
+  shape-outside: circle(50%);
+}
+
+.about {
+  padding: 1rem;
+  position: relative;
+  border-radius: 20px;
+  background-color: #fdffe0;
+  /* height: 20rem; */
+  width: 100%;
+  box-shadow: 10px 10px 5px black;
+  line-height: 130%;
+}
+
+/* .facts > li {
+  list-style-type: none;
+} */
+
+/* .about > p:nth-of-type(2) {
+  text-align: center;
+} */
+
+.about > .flex-container > a > button {
+  display: flex;
+  border: none;
+  align-self: center;
+  padding: 10px 20px 10px 20px;
+  border-radius: 8px;
+  font-family: monospace;
+  cursor: pointer;
+  box-shadow: 5px 5px 2px black;
+  background-color: #a8cbff;
+}
+
+.about > .flex-container > a > button:hover {
+  animation: come-3D 100ms ease-in-out both alternate;
+}
+
+@keyframes come-3D {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    box-shadow: 6px 6px 2px black;
+    background-color: #a8cbff;
+    transform: translateY(-1px);
+  }
+}
+
+.flex-container {
+  padding: 5px;
+  display: flex;
+  width: inherit;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutheader {
+  padding-left: 18rem;
+}
+
+/* ------- PROJECTS -------- */
+
+.sectionsheader {
+  text-align: center;
+  padding-bottom: 5rem;
+  margin-bottom: 5rem;
+}
+
+.projects {
+  display: flex;
+  width: screen;
+  flex-direction: row;
+}
+
+.projectcontainer {
+  position: relative;
+  width: 50%;
+}
+
+.alter-h {
+  font-family: FT88-Expanded;
+  font-size: 20px;
+}
+
+.alter-h > p:last-child {
+  line-height: 5%;
+}
+
+.cardcontainer {
+  /* position: relative; */
+  display: flex;
+  padding: 0 2.5rem 0 2.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagecontainer-left {
+  position: absolute;
+  background-color: grey;
+  width: 250px;
+  height: 550px;
+  top: -4rem;
+  left: -8rem;
+}
+
+.card-left {
+  display: flex;
+  background-color: #a9b4ff;
+  flex-direction: column;
+  width: 330px;
+  height: 410px;
+  border-radius: 0 30px 30px 0;
+  padding: 1rem 1rem 1rem 5rem;
+}
+
+.imagecontainer-right {
+  position: absolute;
+  background-color: grey;
+  width: 250px;
+  height: 550px;
+  top: -4rem;
+  right: -8rem;
+}
+
+.card-right {
+  display: flex;
+  background-color: #a9b4ff;
+  flex-direction: column;
+  width: 330px;
+  height: 410px;
+  border-radius: 30px 0px 0px 30px;
+  padding: 1rem 5rem 1rem 1rem;
+  text-align: right;
 }
