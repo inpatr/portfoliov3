@@ -9,7 +9,6 @@
 /* ---------- GENERAL ---------- */
 html {
   scroll-behaviour: smooth;
-  font-size: 32px;
 }
 
 body::-webkit-scrollbar {
