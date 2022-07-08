@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
 import AOS from "aos";
+import Image from "next/image";
 
 type Props = {
   side: string;
   header: string;
   content: string;
+  src: string;
 };
 
-const ProjectCard = ({ side, header, content }: Props) => {
+const ProjectCard = ({ side, header, content, src }: Props) => {
   const [img, setImg] = useState("imagecontainer-left");
   const [card, setCard] = useState("card-left");
   const [fade, setFade] = useState("");
+
   // const [heading, setHeading] = useState("");
   // const [inhalt, setInhalt] = useState("");
 
@@ -42,7 +45,9 @@ const ProjectCard = ({ side, header, content }: Props) => {
           data-aos-anchor-placement="bottom-bottom"
           // data-aos-offset="800"
           data-aos-easing="ease-in"
-        ></div>
+        >
+          <Image src={src} layout="fill" />
+        </div>
         <div
           className={card}
           data-aos={fade}
