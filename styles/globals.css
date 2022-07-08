@@ -260,7 +260,7 @@ li {
 
 .card-left {
   display: flex;
-  background-color: #a9b4ff;
+  background-color: #d0d0e7;
   flex-direction: column;
   width: 330px;
   height: 410px;
@@ -279,7 +279,7 @@ li {
 
 .card-right {
   display: flex;
-  background-color: #a9b4ff;
+  background-color: #d0d0e7;
   flex-direction: column;
   width: 330px;
   height: 410px;

@@ -1,16 +1,54 @@
+import { useEffect, useState } from "react";
+import AOS from "aos";
+
 type Props = {
-  imgclass: string;
-  cardclass: string;
+  side: string;
   header: string;
   content: string;
 };
 
-const ProjectCard = ({ imgclass, cardclass, header, content }: Props) => {
+const ProjectCard = ({ side, header, content }: Props) => {
+  const [img, setImg] = useState("imagecontainer-left");
+  const [card, setCard] = useState("card-left");
+  const [fade, setFade] = useState("");
+  // const [heading, setHeading] = useState("");
+  // const [inhalt, setInhalt] = useState("");
+
+  let oppositeFade = "";
+
+  useEffect(() => {
+    AOS.init();
+    setImg(`imagecontainer-${side}`);
+    setCard(`card-${side}`);
+    setFade(`fade-${side}`);
+    // setHeading(header);
+    // setInhalt(content);
+  }, []);
+
+  if (side === "left") {
+    oppositeFade = "fade-right";
+  } else {
+    oppositeFade = "fade-left";
+  }
+
+  console.log(oppositeFade);
+
   return (
     <div className="projectcontainer">
       <div className="cardcontainer">
-        <div className={imgclass}></div>
-        <div className={cardclass}>
+        <div
+          className={img}
+          data-aos={oppositeFade}
+          data-aos-anchor-placement="bottom-bottom"
+          // data-aos-offset="600"
+          data-aos-easing="ease-in"
+        ></div>
+        <div
+          className={card}
+          data-aos={fade}
+          data-aos-offset="300"
+          data-aos-easing="ease-in"
+        >
           <div className="alter-h">
             <p>{header}</p>
             <p>--------</p>
