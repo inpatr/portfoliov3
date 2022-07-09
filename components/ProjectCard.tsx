@@ -46,11 +46,7 @@ const ProjectCard = ({ side, header, content, src }: Props) => {
           // data-aos-offset="800"
           data-aos-easing="ease-in"
         >
-          <img
-            src={src}
-            // layout="fill"
-            alt={header}
-          />
+          <Image src={src} layout="fill" alt={header} />
         </div>
         <div
           className={card}
