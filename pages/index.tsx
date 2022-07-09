@@ -65,10 +65,10 @@ const Home: NextPage = () => {
               data-aos-anchor-placement="center-bottom"
               data-aos-easing="ease-in-quad"
             >
-              <img
-                src="../public/mepic1.jpeg"
-                // layout="fill"
-                // className="mypic"
+              <Image
+                src="/mepic1.jpeg"
+                layout="fill"
+                className="mypic"
                 alt="my profile pic"
               />
             </div>
@@ -99,7 +99,7 @@ const Home: NextPage = () => {
         <h3 className="projectsheader">projects</h3>
         <section className="projects">
           <ProjectCard
-            src="../public/finalproject.png"
+            src="/finalproject.png"
             side="left"
             header="final project"
             content="the final project of Camp5 was a map based service for gifting,
@@ -109,7 +109,7 @@ const Home: NextPage = () => {
               categories."
           />
           <ProjectCard
-            src="../public/garden_share2.png"
+            src="/garden_share2.png"
             side="right"
             header="garden share"
             content="this project was our first fullstack app. Inspired by the local Schrebergarten culture, we’ve build a calendar and a booking mechanism which included tasks and other options to specify the stay and make it easier for a group to maintain their garden."

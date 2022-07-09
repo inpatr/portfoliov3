@@ -34,8 +34,6 @@ const ProjectCard = ({ side, header, content, src }: Props) => {
     oppositeFade = "fade-left";
   }
 
-  console.log(oppositeFade);
-
   return (
     <div className="projectcontainer">
       <div className="cardcontainer">
@@ -46,7 +44,7 @@ const ProjectCard = ({ side, header, content, src }: Props) => {
           // data-aos-offset="800"
           data-aos-easing="ease-in"
         >
-          <img src={src} alt={header} />
+          <Image src={src} layout="fill" alt={header} />
         </div>
         <div
           className={card}
