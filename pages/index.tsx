@@ -105,7 +105,7 @@ const Home: NextPage = () => {
             content="the final project of Camp5 was a map based service for gifting,
               sharing and swapping unused items. We’ve build functionalities to
               find those Items on a map, filter and search for specific ones. A
-              main part was the com-plex backend structure, including dynamic
+              main part was the complex backend structure, including dynamic
               categories."
           />
           <ProjectCard
