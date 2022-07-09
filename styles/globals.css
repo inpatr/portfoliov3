@@ -275,7 +275,7 @@ li {
   width: 22rem;
   height: 28rem;
   border-radius: 30px;
-  padding: 1rem 1rem 1rem 5rem;
+  padding: 1rem 1rem 1rem 5.25rem;
   box-shadow: 10px 10px 5px black;
 }
 
@@ -297,7 +297,7 @@ li {
   width: 22rem;
   height: 28rem;
   border-radius: 30px;
-  padding: 1rem 5rem 1rem 1rem;
+  padding: 1rem 5.25rem 1rem 1rem;
   text-align: right;
   box-shadow: 10px 10px 5px black;
 }
