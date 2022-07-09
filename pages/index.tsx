@@ -65,9 +65,8 @@ const Home: NextPage = () => {
               data-aos-anchor-placement="center-bottom"
               data-aos-easing="ease-in-quad"
             >
-              <Image
+              <img
                 src="/../public/static/img/mepic1.jpeg"
-                layout="fill"
                 className="mypic"
                 alt="my profile pic"
               />
