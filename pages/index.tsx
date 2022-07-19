@@ -28,7 +28,7 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      {/* <Header /> */}
+      <Header />
       <main>
         <section>
           <div className="headline">
