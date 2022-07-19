@@ -41,10 +41,9 @@ const ProjectCard = ({ side, header, content, src }: Props) => {
           className={img}
           data-aos={oppositeFade}
           data-aos-anchor-placement="bottom-bottom"
-          // data-aos-offset="800"
           data-aos-easing="ease-in"
         >
-          <Image src={src} layout="fill" alt={header} />
+          <Image src={src} layout="fill" alt={header} className={img} />
         </div>
         <div
           className={card}
@@ -54,7 +53,7 @@ const ProjectCard = ({ side, header, content, src }: Props) => {
         >
           <div className="alter-h">
             <p>{header}</p>
-            <p>--------</p>
+            <p>-------</p>
           </div>
           <p>{content}</p>
         </div>

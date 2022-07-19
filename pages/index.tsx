@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../components/Header";
 import AOS from "aos";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 import Image from "next/image";
 
@@ -22,8 +22,11 @@ const arrowdown = (
 );
 
 const Home: NextPage = () => {
+  let dynamicwidth: number;
+
   useEffect(() => {
     AOS.init();
+    // dynamicwidth = window.innerWidth;
   }, []);
 
   return (
@@ -33,7 +36,11 @@ const Home: NextPage = () => {
         <section>
           <div className="headline">
             <h1>
-              Inga Patricia Traub
+              Inga
+              <br />
+              Patricia
+              <br />
+              Traub
               <br />
               ----------
             </h1>
@@ -41,42 +48,41 @@ const Home: NextPage = () => {
               <h3>portfolio</h3>
             </div>
           </div>
-        </section>
-        <div
-          className="scrollhint"
-          data-aos="fade-out"
-          data-aos-anchor-placement="center-bottom"
-          // data-aos-easing="ease-out"
-        >
-          <p>scroll</p>
-          <div className="arrowcontainer">{arrowdown}</div>
-        </div>
-        <section>
           <div
-            className="about"
-            // data-aos="fade-left"
-            // data-aos-offset="300"
-            // data-aos-easing="ease-in-sine"
+            className="scrollhint"
+            data-aos="fade-out"
+            data-aos-anchor-placement="center-bottom"
+            // data-aos-easing="ease-out"
           >
+            <p>scroll</p>
+            <div className="arrowcontainer">{arrowdown}</div>
+          </div>
+        </section>
+        <section>
+          <div className="about">
             <div
               className="mypic"
               data-aos="fade"
-              // data-aos-offset="500"
               data-aos-anchor-placement="center-bottom"
               data-aos-easing="ease-in-quad"
             >
               <Image
                 src="/mepic1.jpeg"
                 layout="fill"
-                className="mypic"
                 alt="my profile pic"
+                className="mypic"
               />
             </div>
-            <div className="mypicborder"></div>
-            <div className="aboutheader">
-              <h2>About</h2>
-            </div>
-            <p>
+            <div
+              className="about-card"
+              // data-aos="fade-left"
+              // data-aos-offset="300"
+              // data-aos-easing="ease-in-sine"
+            >
+              <div className="mypicborder"></div>
+              <div className="aboutheader-container">
+                <h2>About</h2>
+              </div>
               <ul className="facts">
                 <li>- born in &apos;93</li>
                 <li>- based in Leipzig</li>
@@ -87,12 +93,14 @@ const Home: NextPage = () => {
                 <li>- singer & producer of electronic music</li>
                 <li>- love for non-violent video games</li>
               </ul>
-            </p>
-            <p>I&apos;m currently looking for jobs. Feel free to contact me!</p>
-            <div className="flex-container">
-              <a href="mailto:i.traub@posteo.de">
-                <button>Contact me</button>
-              </a>
+              <p>
+                I&apos;m currently looking for jobs. Feel free to contact me!
+              </p>
+              <div className="contactbutton-container">
+                <a href="mailto:i.traub@posteo.de">
+                  <button>Contact me</button>
+                </a>
+              </div>
             </div>
           </div>
         </section>
