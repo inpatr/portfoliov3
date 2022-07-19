@@ -7,37 +7,24 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;500;600&display=swap");
 
 /* ---------- GENERAL ---------- */
-html {
-  scroll-behaviour: smooth;
-}
 
-body::-webkit-scrollbar {
-  display: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
 body {
-  font-size-adjust: none;
-  text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  padding-top: 12.5rem;
-  padding-left: 17.5rem;
-  padding-right: 17.5rem;
-  margin: 0;
   background-image: url("../public/noise.png"),
     linear-gradient(#aaa8ff, #a8cbff, #fbffcc);
-  /* background-repeat: no-repeat, repeat; */
-  height: screen;
   font-family: IBM Plex Mono, monospace;
+  height: screen;
+  width: screen;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
 
-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 18.75rem;
+body::-webkit-scrollbar {
+  display: none;
 }
 
 a {
@@ -45,87 +32,348 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-h1 {
-  font-family: FT88-Expanded;
-  font-size: 80px;
-  color: #fdffe0;
-  letter-spacing: 10%;
-}
-
-h2 {
-  font-family: FT88-Expanded;
-  font-size: 48px;
-  text-decoration: underline;
-  letter-spacing: 15px;
-}
-
-h3 {
-  font-family: FT88-Expanded;
-  font-size: 40px;
-  color: #fdffe0;
-  letter-spacing: 10%;
-}
-
-/* ---------- HEADER ---------- */
-
-.header {
-  display: flex;
-  flex-direction: row;
-  background-color: none;
-  width: screen;
-  height: 6rem;
-}
-
 li {
   list-style-type: none;
 }
 
-/* ---------- MAIN ---------- */
-[data-aos="fade-out"] {
-  opacity: 1;
-  transition-property: opacity;
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
-[data-aos="fade-out"].aos-animate {
-  opacity: 0;
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  font-family: FT88-Expanded;
+  color: #fdffe0;
+  align-self: center;
+}
+
+h3 {
+  font-family: FT88-Expanded;
+  color: #fdffe0;
+}
+
+/* ----- LANDING ----- */
+.headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .portfolio {
-  position: absolute;
-  right: 3rem;
-  bottom: -1rem;
+  align-self: flex-end;
 }
 
-.headline {
-  position: relative;
-  width: 110%;
-  padding-left: 3rem;
+.scrollhint {
+  color: #fdffe0;
+  align-self: flex-end;
+  animation: animated-text 1s ease-in forwards infinite alternate;
 }
 
 .arrowcontainer {
   display: flex;
   justify-content: center;
-  width: 3.25rem;
 }
 
 .arrow {
-  /* padding-top: 5px; */
   height: 1rem;
   width: 1rem;
 }
 
-.scrollhint {
-  /* font-family: FT88-Expanded;
-  font-size: 10px; */
-  position: absolute;
-  right: 5rem;
-  bottom: 2rem;
-  color: #fdffe0;
-  animation: animated-text 1s ease-in forwards infinite alternate;
+@media (min-width: 1280px) {
+  h1 {
+    font-size: 80px;
+  }
+  h3 {
+    font-size: 40px;
+  }
+  .scrollhint {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+  }
 }
+
+/* ----- ABOUT ----- */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+h2 {
+  font-family: FT88-Expanded;
+  font-size: 32px;
+  text-decoration: underline;
+  letter-spacing: 10px;
+  padding: 1rem;
+}
+
+.about-card {
+  font-size: 14px;
+  line-height: 130%;
+  background-color: #fdffe0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 13px 13px 7px black;
+}
+
+.about-card > p {
+  padding: 0.5rem;
+}
+
+.mypic {
+  position: relative;
+  background-color: grey;
+  border-radius: 50%;
+  height: 15rem;
+  width: 15rem;
+}
+
+.mypicborder {
+}
+
+.about-card > .contactbutton-container > a {
+  padding-top: 0.5rem;
+}
+
+.about-card > .contactbutton-container > a > button {
+  display: flex;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-family: monospace;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 5px 5px 2px black;
+  background-color: #a8cbff;
+}
+
+@media (min-width: 1280px) {
+  h2 {
+    font-size: 48px;
+    letter-spacing: 15px;
+  }
+
+  .about {
+    position: relative;
+  }
+
+  .about-card {
+    position: relative;
+    display: block;
+    padding: 1.25rem;
+    font-size: 18px;
+    width: 60vw;
+  }
+
+  .aboutheader-container {
+    padding-left: 22rem;
+  }
+
+  .mypic {
+    position: absolute;
+    height: 28rem;
+    width: 28rem;
+    top: -2rem;
+    left: -3rem;
+    z-index: 10;
+    box-shadow: 5px 5px 2px black;
+  }
+
+  .mypicborder {
+    float: left;
+    margin-right: 3rem;
+    border-radius: 50%;
+    height: 21rem;
+    width: 21rem;
+    object-fit: cover;
+    shape-outside: circle(50%);
+  }
+
+  .facts {
+    padding: 2rem;
+  }
+
+  .facts > li {
+    padding: 0.25rem 0 0.25rem;
+  }
+
+  .about-card > p {
+    padding-left: 9rem;
+    text-align: center;
+  }
+
+  .contactbutton-container {
+    padding: 5px;
+    display: flex;
+    width: inherit;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-card > .contactbutton-container > a > button {
+    padding: 13px 26px 13px 26px;
+  }
+
+  .about-card > .contactbutton-container > a > button:hover {
+    animation: come-3D 100ms ease-in-out both alternate;
+  }
+}
+
+/* ----- PROJECTS ----- */
+
+.projects {
+  padding-bottom: 5rem;
+}
+
+.projectsheader {
+  height: 100vh;
+  padding-top: 48vh;
+}
+
+.projectcontainer {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0 2rem 0;
+}
+
+.cardcontainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem 0 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-right {
+  display: flex;
+  background-color: #d0d0e7;
+  flex-direction: column;
+  border-radius: 30px;
+  padding: 1rem;
+  box-shadow: 10px 10px 5px black;
+}
+
+.card-left {
+  display: flex;
+  background-color: #d0d0e7;
+  flex-direction: column;
+  border-radius: 30px;
+  padding: 1rem;
+  box-shadow: 10px 10px 5px black;
+}
+
+.imagecontainer-left {
+  display: hidden;
+}
+
+.imagecontainer-right {
+  display: hidden;
+}
+
+.alter-h {
+  font-family: FT88-Expanded;
+  font-size: 24px;
+}
+
+@media (min-width: 1280px) {
+  .projectsheader {
+    height: 20vh;
+    padding-top: 10rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 8rem;
+  }
+
+  .projects {
+    display: flex;
+    width: screen;
+    flex-direction: row;
+  }
+
+  .projectcontainer {
+    position: relative;
+    width: 50%;
+  }
+
+  .alter-h > p:last-child {
+    line-height: 40px;
+  }
+
+  .cardcontainer {
+    /* position: relative; */
+    display: flex;
+    padding: 0 4rem 0 4rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imagecontainer-left {
+    position: absolute;
+    background-color: grey;
+    width: 16rem;
+    height: 36rem;
+    top: -4rem;
+    left: -9rem;
+    z-index: 10;
+    box-shadow: 5px 5px 3px grey;
+  }
+
+  .card-left {
+    width: 22rem;
+    height: 28rem;
+    border-radius: 30px;
+    padding: 3rem 1rem 1rem 5.25rem;
+    box-shadow: 10px 10px 5px black;
+  }
+
+  .imagecontainer-right {
+    position: absolute;
+    background-color: grey;
+    width: 16rem;
+    height: 36rem;
+    top: -4rem;
+    right: -9rem;
+    z-index: 10;
+    box-shadow: 5px 5px 3px grey;
+  }
+
+  .card-right {
+    width: 22rem;
+    height: 28rem;
+    border-radius: 30px;
+    padding: 3rem 5.25rem 1rem 1rem;
+    text-align: right;
+    box-shadow: 10px 10px 5px black;
+  }
+}
+
+/* ----- ANIMATIONS ----- */
 
 @keyframes animated-text {
   0% {
@@ -134,65 +382,6 @@ li {
   100% {
     transform: translateY(20px);
   }
-}
-
-/* ---------- ABOUT ---------- */
-
-.mypic {
-  position: absolute;
-  border-radius: 50%;
-  background-color: grey;
-  height: 26rem;
-  width: 26rem;
-  top: -5rem;
-  left: -6rem;
-}
-
-.mypicborder {
-  float: left;
-  margin-right: 12px;
-  border-radius: 50%;
-  height: 19rem;
-  width: 19rem;
-  object-fit: cover;
-  shape-outside: circle(50%);
-}
-
-.about {
-  padding: 1.25rem;
-  position: relative;
-  border-radius: 20px;
-  background-color: #fdffe0;
-  /* height: 20rem; */
-  width: 100%;
-  box-shadow: 13px 13px 7px black;
-  line-height: 130%;
-  font-size: 18px;
-}
-
-/* .facts > li {
-  list-style-type: none;
-} */
-
-/* .about > p:nth-of-type(2) {
-  text-align: center;
-} */
-
-.about > .flex-container > a > button {
-  display: flex;
-  border: none;
-  align-self: center;
-  padding: 13px 26px 13px 26px;
-  border-radius: 8px;
-  font-family: monospace;
-  cursor: pointer;
-  box-shadow: 5px 5px 2px black;
-  background-color: #a8cbff;
-  font-size: 18px;
-}
-
-.about > .flex-container > a > button:hover {
-  animation: come-3D 100ms ease-in-out both alternate;
 }
 
 @keyframes come-3D {
@@ -204,100 +393,4 @@ li {
     background-color: #a8cbff;
     transform: translateY(-1px);
   }
-}
-
-.flex-container {
-  padding: 5px;
-  display: flex;
-  width: inherit;
-  align-items: center;
-  justify-content: center;
-}
-
-.aboutheader {
-  padding-left: 20rem;
-}
-
-/* ------- PROJECTS -------- */
-
-.projectsheader {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 8rem;
-}
-
-.projects {
-  display: flex;
-  width: screen;
-  flex-direction: row;
-}
-
-.projectcontainer {
-  position: relative;
-  width: 50%;
-}
-
-.alter-h {
-  font-family: FT88-Expanded;
-  font-size: 24px;
-}
-
-.alter-h > p:last-child {
-  line-height: 5%;
-}
-
-.cardcontainer {
-  /* position: relative; */
-  display: flex;
-  padding: 0 4rem 0 4rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.imagecontainer-left {
-  position: absolute;
-  background-color: grey;
-  width: 16rem;
-  height: 36rem;
-  top: -4rem;
-  left: -7rem;
-  z-index: 10;
-  box-shadow: 5px 5px 3px grey;
-}
-
-.card-left {
-  display: flex;
-  background-color: #d0d0e7;
-  flex-direction: column;
-  width: 22rem;
-  height: 28rem;
-  border-radius: 30px;
-  padding: 1rem 1rem 1rem 5.25rem;
-  box-shadow: 10px 10px 5px black;
-}
-
-.imagecontainer-right {
-  position: absolute;
-  background-color: grey;
-  width: 16rem;
-  height: 36rem;
-  top: -4rem;
-  right: -7rem;
-  z-index: 10;
-  box-shadow: 5px 5px 3px grey;
-}
-
-.card-right {
-  display: flex;
-  background-color: #d0d0e7;
-  flex-direction: column;
-  width: 22rem;
-  height: 28rem;
-  border-radius: 30px;
-  padding: 1rem 5.25rem 1rem 1rem;
-  text-align: right;
-  box-shadow: 10px 10px 5px black;
 }
