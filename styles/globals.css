@@ -250,6 +250,19 @@ h2 {
   padding-top: 48vh;
 }
 
+.smallcard {
+  display: flex;
+  background-color: #d0d0e7;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  padding: 1rem;
+  box-shadow: 10px 10px 5px black;
+  gap: 1rem;
+}
+
+/* -------------------- */
 .projectcontainer {
   display: flex;
   flex-grow: 1;
